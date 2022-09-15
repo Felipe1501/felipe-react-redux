@@ -9,7 +9,7 @@ const reducers = combineReducers({
         }
     } ,
     names: function(state, action){
-        console.log(state, ' ', action);
+       // console.log(state, ' ', action);
         return[
             'Ana',
             'Bianca',
