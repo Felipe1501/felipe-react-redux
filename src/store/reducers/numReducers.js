@@ -1,3 +1,5 @@
+import { NM_MAX_CHANGE, NM_MIN_CHANGE } from "../actions/actionTypes";
+
 const initialState = {
     min: 1,
     max: 10
@@ -6,12 +8,12 @@ const initialState = {
 export default function(state = initialState, action){
         
     switch(action.type){
-        case 'NM_MIN_CHANGE':
+        case NM_MIN_CHANGE:
             return{
                 ...state,
                 min: action.payload
             }
-        case 'NM_MAX_CHANGE':
+        case NM_MIN_CHANGE:
             return{
                 ...state,
                 max: action.payload
