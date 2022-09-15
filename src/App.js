@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Card from './components/Card';
+import Average from './components/Average';
+import Sum from './components/Sum';
+import Sorteio from './components/Sorteio';
 import Interval from './components/Interval';
 
 function App() {
@@ -16,17 +18,9 @@ function App() {
 
       </div>
       <div className='linha'>
-      <Card title="Card 2" blue>
-          AZUL
-        </Card> 
-        <Card title="Card 3" green>
-         VERDE
-        </Card>
-        <Card title="Card 4" purple>
-          ROXO
-        </Card>
-
-
+      <Average></Average>
+      <Sum></Sum>
+      <Sorteio></Sorteio>
       </div>
     </div>
   );
