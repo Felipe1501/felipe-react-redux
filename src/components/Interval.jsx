@@ -7,13 +7,17 @@ import {changeNumberMin} from '../store/actions/numbers';
 
 function Interval(props) {
     const {min, max} = props;
-    props.changeMin(10000)
+    
     return (
         <Card title="Intervalo de Números" red>
             <div className="Interval">
             <span>
                 <strong>Mínimo:</strong>
-                <input type="number" value={min} readOnly />
+                <input 
+                    type="number" 
+                    value={min} 
+                    onChange={e => props.changeMin(+e.target.value)} 
+                    />
             </span>
             <span>
                 <strong>Máximo:</strong>
@@ -31,7 +35,7 @@ function mapStateToProps(state){
     }
 }
 
-function mapActionCreatorsToProps(dispatch){
+function mapDispatchToProps(dispatch){
     return {
         changeMin(newNumber){
             //action creator -> actiom
@@ -42,5 +46,5 @@ function mapActionCreatorsToProps(dispatch){
 }
 
 export default connect
-(mapStateToProps, mapActionCreatorsToProps)
+(mapStateToProps, mapDispatchToProps)
 (Interval)
